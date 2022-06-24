@@ -7,6 +7,7 @@ homepage = "https://github.com/erikbrinkman/cdasim"
 repository = "https://github.com/erikbrinkman/cdasim"
 license = "MIT"
 description = "A fast simulator of a simple CDA or call market"
+edition = "2021"
 
 [badges]
 travis-ci = { repository = "erikbrinkman/cdasim" }

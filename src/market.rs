@@ -3,7 +3,7 @@ use std::collections::BinaryHeap;
 
 use rand::{self, Rng};
 
-use agent::Agent;
+use crate::agent::Agent;
 
 
 impl <'a> Ord for Agent<'a> {
@@ -52,7 +52,7 @@ pub fn cda<'a>(agents: &mut Vec<Agent<'a>>) -> Option<f64> {
         for agent in agents.iter_mut() {
             if agent.buyer {
                 if sells.peek().map(|s| -s.bid <= agent.bid).unwrap_or(false) {
-                    let mut seller = sells.pop().unwrap();
+                    let seller = sells.pop().unwrap();
                     let price = -seller.bid;
                     trans(agent, seller, price);
                 } else {
@@ -60,7 +60,7 @@ pub fn cda<'a>(agents: &mut Vec<Agent<'a>>) -> Option<f64> {
                 }
             } else {
                 if buys.peek().map(|b| -agent.bid <= b.bid).unwrap_or(false) {
-                    let mut buyer = buys.pop().unwrap();
+                    let buyer = buys.pop().unwrap();
                     let price = buyer.bid;
                     trans(buyer, agent, price);
                 } else {
@@ -93,7 +93,7 @@ pub fn call<'a>(agents: &mut Vec<Agent<'a>>) -> Option<f64> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use agent::Style;
+    use crate::agent::Style;
 
     const STRAT: &str = "";
     
