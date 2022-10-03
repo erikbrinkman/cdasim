@@ -178,7 +178,8 @@ fn run_sim(agents: &mut [Agent<'_>], market: &impl Market) -> Features {
 
 #[cfg(test)]
 mod tests {
-    use super::{Agent, Cda, Style};
+    use super::{Agent, Args, Cda, Style};
+    use clap::CommandFactory;
     use rand::distributions::{Distribution, Uniform};
     use rand::seq::SliceRandom;
 
@@ -213,5 +214,10 @@ mod tests {
                 assert!((features.ce_surplus - ce_surplus_other).abs() < 1e-6);
             }
         }
+    }
+
+    #[test]
+    fn test_cli() {
+        Args::command().debug_assert()
     }
 }
