@@ -1,8 +1,9 @@
 CDA Sim
 =======
-[![tests](https://github.com/erikbrinkman/cdasim/actions/workflows/rust.yml/badge.svg)](https://github.com/erikbrinkman/cdasim/actions/workflows/rust.yml)
+[![crates.io](https://img.shields.io/crates/v/cdasim)](https://crates.io/crates/cdasim)
 [![license](https://img.shields.io/github/license/erikbrinkman/cdasim)](LICENSE)
-[![Crates.io](https://img.shields.io/crates/v/cdasim)](https://crates.io/crates/cdasim)
+[![tests](https://github.com/erikbrinkman/cdasim/actions/workflows/rust.yml/badge.svg)](https://github.com/erikbrinkman/cdasim/actions/workflows/rust.yml)
+
 
 A fast simulator of a simple CDA or call market.
 The implementation is inspired by
