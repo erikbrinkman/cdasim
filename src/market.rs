@@ -107,8 +107,8 @@ impl Market for Call {
 
 #[cfg(test)]
 mod tests {
-    use crate::{Style, Agent};
     use super::{Call, Market};
+    use crate::{Agent, Style};
 
     fn truthful(buyer: bool, value: f64) -> Agent<'static> {
         let mut agent = Agent::new(buyer, "", Style::Correct, 0.0);

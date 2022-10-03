@@ -178,7 +178,7 @@ fn run_sim(agents: &mut [Agent<'_>], market: &impl Market) -> Features {
 
 #[cfg(test)]
 mod tests {
-    use super::{Agent, Style, Cda};
+    use super::{Agent, Cda, Style};
     use rand::distributions::{Distribution, Uniform};
     use rand::seq::SliceRandom;
 
