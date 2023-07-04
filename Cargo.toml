@@ -1,6 +1,6 @@
 [package]
 name = "cdasim"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Erik Brinkman <erik.brinkman@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/erikbrinkman/cdasim"
