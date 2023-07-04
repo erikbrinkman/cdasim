@@ -25,7 +25,7 @@ impl<'a> PartialEq for Agent<'a> {
 impl<'a> Eq for Agent<'a> {}
 
 pub trait Market {
-    fn simulate<'a>(&self, agents: &mut [Agent<'a>]) -> Option<f64>;
+    fn simulate(&self, agents: &mut [Agent<'_>]) -> Option<f64>;
 }
 
 pub struct Cda;
